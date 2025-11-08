@@ -50,15 +50,15 @@ export default function Hero() {
           />
         </div>
 
-        {/* 1. H1 Optimizat (Secțiunea 3.3) */}
+        {/* 1. H1 Optimizat (SEO) */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-4 sm:mb-6 tracking-tight animate-fade-in-up leading-tight">
           Măcelărie Premium <br />
           <span className="text-[#DC2626]">Turcească</span>
         </h1>
 
-        {/* 2. Link-uri Interne ca Ancore HTML pentru SPA (Secțiunea 4.6) */}
+        {/* 2. Link-uri Interne ca Ancore HTML (Stil ASCUNS) */}
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-xl lg:max-w-2xl mx-auto mb-8 sm:mb-12 font-light animate-fade-in-up-delay px-4">
-          Unde tradiția întâlnește excelența în fiecare <a href="#produse" className="underline text-white hover:text-[#DC2626] transition">tăietură</a>, fiecare <a href="#specialitati" className="underline text-white hover:text-[#DC2626] transition">produs</a>, fiecare experiență.
+          Unde tradiția întâlnește excelența în fiecare <a href="#produse" className="text-gray-300 transition">tăietură</a>, fiecare <a href="#specialitati" className="text-gray-300 transition">produs</a>, fiecare experiență.
         </p>
 
         <button
