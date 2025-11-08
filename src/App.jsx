@@ -25,8 +25,8 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Gurm-et | Premium Butcher Shop & Turkish Market</title>
-        <meta name="description" content="Gurm-et offers premium quality meats and authentic Turkish specialties. Visit our butcher shop for the finest cuts and traditional Turkish products." />
+        <title>Gurme-et | Măcelărie Premium și Specialități Turcești</title>
+        <meta name="description" content="Descoperă Gurm-et, destinația ta pentru tăieturi premium de carne și delicatese autentice turcești. Calitate fără compromis și gust autentic." />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Hero />
