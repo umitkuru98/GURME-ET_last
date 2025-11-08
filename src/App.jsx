@@ -19,7 +19,7 @@ function App() {
     "https://www.celebiogullari.com.tr/UserFiles/Image/images/soguk-baklava-hakkinda-bilmeniz-gerekenler.jpg",
     "https://back-lava.de/cdn/shop/files/ConvertOut-Resized-Backlava-13.05.24_55_1_3.jpg?v=1752929405&width=1620",
     "https://png.pngtree.com/png-vector/20240512/ourlarge/pngtree-turkish-grand-spice-bazaar-in-istanbul-turkey-a-burst-of-vibrant-png-image_12400994.png",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3IaoQuYz2T99qnRJazNhbNmsuKgUQxdEwhw&s"
+    "https://e498h76z5mp.exactdn.com/wp-content/uploads/2020/11/sesame-halva-scaled.jpg"
   ];
 
   return (
