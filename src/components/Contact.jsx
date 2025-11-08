@@ -26,26 +26,48 @@ export default function Contact() {
     };
   }, []);
 
+  // LINK-UL TĂU FINAL PENTRU ADRESĂ
+  const GOOGLE_MAPS_LINK = "https://maps.app.goo.gl/Gz7nsmtNBVUzyVu49"; 
+  const ADDRESS = "Calea București 79, Tunari";
+
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Vizitează-ne",
-      details: ["Calea București 79, Tunari "]
+      title: "Adresă Macelărie", 
+      details: [
+        // Utilizează link-ul tău furnizat
+        <a 
+          href={GOOGLE_MAPS_LINK} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="hover:underline text-[#DC2626] transition"
+        >
+          {ADDRESS}
+        </a>
+      ]
     },
     {
       icon: Clock,
-      title: "Program",
+      title: "Program Magazin", 
       details: ["Luni-Sâmbătă: 9:00 - 22:00", "Duminică: 9:00 - 20:00"]
     },
     {
       icon: Phone,
-      title: "Telefon",
-      details: ["+40 728 99 99 88"]
+      title: "Contact Telefonic", 
+      details: [
+        <a href="tel:+40728999988" className="hover:underline text-[#DC2626] transition"> 
+          +40 728 99 99 88
+        </a>
+      ]
     },
     {
       icon: Mail,
-      title: "Email",
-      details: ["cotact@gurme-et.ro"]
+      title: "Adresă Email", 
+      details: [
+        <a href="mailto:contact@gurme-et.ro" className="hover:underline text-[#DC2626] transition">
+          cotact@gurme-et.ro
+        </a>
+      ]
     }
   ];
 
@@ -55,12 +77,16 @@ export default function Contact() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         <div className={`text-center mb-10 sm:mb-12 md:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          
+          {/* FIX H2 Break: Utilizăm <span className="whitespace-nowrap"> */}
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#0A0A0A] mb-4 sm:mb-6 tracking-tight px-4">
-            Vizitează <span className="text-[#DC2626]">-ne</span>
+            Contact și Locație <span className="whitespace-nowrap">Gurme-et</span>
           </h2>
+          
           <div className="w-20 sm:w-24 h-1 bg-[#DC2626] mx-auto mb-6 sm:mb-8" />
+          
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 font-light max-w-2xl mx-auto px-4">
-            Vino să descoperi diferența. Te așteptăm.
+            Vino să descoperi diferența, sau contactează-ne direct pentru comenzi și detalii.
           </p>
         </div>
 
@@ -78,7 +104,7 @@ export default function Contact() {
                     <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-[#0A0A0A] mb-1 sm:mb-2">{info.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#0A0A0A] mb-1 sm:mb-2">{info.title}</h3> 
                     {info.details.map((detail, idx) => (
                       <p key={idx} className="text-sm sm:text-base text-gray-600 font-light">{detail}</p>
                     ))}
@@ -89,10 +115,10 @@ export default function Contact() {
           })}
         </div>
 
-        {/* Map */}
+        {/* Harta Google Maps */}
         <div className={`rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29789.3021831127!2d26.125078290140937!3d44.537760052225835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b21d0b68299a3f%3A0x260bac21cb953706!2sGurme%20et!5e0!3m2!1sen!2sro!4v1762479507570!5m2!1sen!2sro"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22753.753999341785!2d26.151625815869135!3d44.531143139167575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b21d0b68299a3f%3A0x260bac21cb953706!2sGurme%20et!5e0!3m2!1sen!2sro!4v1762634524292!5m2!1sen!2sro" 
             width="100%"
             height="350"
             style={{ border: 0 }}

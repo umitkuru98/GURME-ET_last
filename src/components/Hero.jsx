@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import logoGurmEt from '../gurm-et-logo.png';
-import bullHead from '../bull-head.png'; // Asigură-te că ai această imagine în directorul assets/
+import bullHead from '../bull-head.png'; 
+// Linia "import { Link } from 'react-router-dom';" este ELIMINATĂ!
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -13,6 +14,7 @@ export default function Hero() {
   }, []);
 
   const scrollToContent = () => {
+    // Presupunem că elementul 'about' este prima secțiune după hero
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -20,14 +22,14 @@ export default function Hero() {
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0A0A0A] via-[#1A1A1A] to-[#DC2626]">
       {/* Bull head background image */}
       <img
-        src={bullHead} // Asigură-te că ai această imagine și calea este corectă
+        src={bullHead} 
         alt="Bull Head Background"
-        className="absolute inset-0 w-full h-full object-contain opacity-[0.15] z-0 transform scale-100" // Opacitate și mai mică, și o scalare de 75%
-        style={{ top: '50%', left: '50%', transform: `translate(-50%, -50%) scale(${1.1 - scrollY * 0.0005})` }} // Scalare dinamică și centrare
+        className="absolute inset-0 w-full h-full object-contain opacity-[0.15] z-0 transform scale-100" 
+        style={{ top: '50%', left: '50%', transform: `translate(-50%, -50%) scale(${1.1 - scrollY * 0.0005})` }} 
       />
 
       {/* Animated background pattern */}
-      <div className="absolute inset-0 opacity-10 z-[1]"> {/* Z-index 1 pentru a fi peste capul de taur */}
+      <div className="absolute inset-0 opacity-10 z-[1]"> 
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
           backgroundSize: '48px 48px',
@@ -48,13 +50,15 @@ export default function Hero() {
           />
         </div>
 
+        {/* 1. H1 Optimizat (Secțiunea 3.3) */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold text-white mb-4 sm:mb-6 tracking-tight animate-fade-in-up leading-tight">
-          Măcelărie Premium.<br />
-          <span className="text-[#DC2626]">Autentic Turcesc.</span>
+          Măcelărie Premium <br />
+          <span className="text-[#DC2626]">Turcească</span>
         </h1>
 
+        {/* 2. Link-uri Interne ca Ancore HTML pentru SPA (Secțiunea 4.6) */}
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-xl lg:max-w-2xl mx-auto mb-8 sm:mb-12 font-light animate-fade-in-up-delay px-4">
-          Unde tradiția întâlnește excelența în fiecare tăietură, fiecare produs, fiecare experiență.
+          Unde tradiția întâlnește excelența în fiecare <a href="#produse" className="underline text-white hover:text-[#DC2626] transition">tăietură</a>, fiecare <a href="#specialitati" className="underline text-white hover:text-[#DC2626] transition">produs</a>, fiecare experiență.
         </p>
 
         <button
