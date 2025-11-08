@@ -28,7 +28,7 @@ export default function Footer() {
           {/* Blocul 1: Logo și Slogan */}
           <div className="flex flex-col sm:flex-row items-start md:items-center gap-3 sm:gap-4">
             <img 
-              src="https://maps.app.goo.gl/YourGoogleMapsLink9" 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_690d173136aae953d00d9a46/d563377ff_gurm-et-logo.png" 
               alt="Gurm-et Logo"
               className="h-10 sm:h-12"
             />
