@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gurme Et Tunari — Măcelărie Helal Certificată | Carne Premium Ilfov</title>
+  <meta name="description" content="Măcelărie helal certificată în Tunari, Ilfov. Carne premium de vită și miel direct de la fermă, baklava autentică turcească și produse orientale importate. Calea București 79, Tunari. Lun-Sam 09-21.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.gurme-et.ro/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"         content="website">
+  <meta property="og:site_name"    content="Gurme Et">
+  <meta property="og:title"        content="Gurme Et — Măcelărie Helal Certificată | Tunari, Ilfov">
+  <meta property="og:description"  content="Carne premium de vită și miel 100% helal certificată, baklava autentică și produse turcești importate. Calea București 79, Tunari, Ilfov.">
+  <meta property="og:url"          content="https://www.gurme-et.ro/">
+  <meta property="og:image"        content="https://www.gurme-et.ro/images/hero-bg.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale"       content="ro_RO">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Gurme Et — Măcelărie Helal | Tunari, Ilfov">
+  <meta name="twitter:description" content="Carne premium helal certificată, baklava autentică și produse turcești. Tunari, Ilfov.">
+  <meta name="twitter:image"       content="https://www.gurme-et.ro/images/hero-bg.png">
+
+  <link rel="icon" href="brand_assetmetns/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="brand_assetmetns/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" as="image" href="images/hero-bg.png" fetchpriority="high">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --ink:     #0f0600;
+      --cream:   #f7f1e8;
+      --red:     #E8192C;
+      --gold:    #C9962A;
+      --gold-lt: #e8b84b;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--ink);
+      font-family: 'Montserrat', sans-serif;
+      color: var(--cream);
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── GRAIN OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.45;
+    }
+
+    /* ── TYPOGRAPHY ── */
+    .hero-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(4rem, 8vw, 9rem);
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+    }
+    .section-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.6rem, 5vw, 5.5rem);
+      font-weight: 600;
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+    }
+    .label-text {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* ── NAV ── */
+    #main-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4%;
+      transition: background 0.4s ease, box-shadow 0.4s ease, height 0.3s ease;
+    }
+    #main-nav.scrolled {
+      background: rgba(15, 6, 0, 0.96);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 1px 0 rgba(201,150,42,0.15), 0 4px 32px rgba(0,0,0,0.6);
+      height: 60px;
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+    .nav-logo img { height: 28px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; }
+    .nav-link {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(247,241,232,0.72);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 3px;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      transition: color 0.25s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: var(--cream); }
+    .nav-link:hover::after { width: 100%; }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      background: var(--red);
+      color: white;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.65rem 1.4rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+    .nav-cta:hover { background: #c4141f; transform: translateY(-1px); }
+
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      /* min 44×44px touch target */
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 1.5px;
+      background: var(--cream);
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      pointer-events: none;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* ── MOBILE DRAWER ── */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 60px; left: 0; right: 0;
+      background: rgba(15,6,0,0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(201,150,42,0.15);
+      border-bottom: 1px solid rgba(201,150,42,0.15);
+      flex-direction: column;
+      padding: 0.5rem 4% 1rem;
+      gap: 0;
+      z-index: 199;
+    }
+    .mobile-drawer.open { display: flex; }
+    /* drawer links get proper 44px touch targets */
+    .mobile-drawer .nav-link {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(247,241,232,0.05);
+      font-size: 0.75rem;
+    }
+    .mobile-drawer .nav-cta {
+      margin-top: 1rem;
+      width: fit-content;
+      padding: 0.85rem 1.6rem;
+    }
+
+    /* ── HALAL PILL ── */
+    .halal-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.3);
+      padding: 4px 12px;
+    }
+    .halal-pill span {
+      color: #4ade80;
+      font-size: 0.55rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    /* ── TICKER ── */
+    .ticker-wrap { background: var(--red); overflow: hidden; white-space: nowrap; padding: 0.9rem 0; }
+    .ticker-track { display: inline-block; animation: ticker 32s linear infinite; }
+    .ticker-track span {
+      color: rgba(255,255,255,0.9);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 0 2.5rem;
+    }
+    .ticker-track .sep { color: rgba(255,255,255,0.32); padding: 0; }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--red);
+      color: white;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 1.1rem 2.4rem;
+      min-height: 48px; /* touch target */
+      text-decoration: none;
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+    .btn-primary:hover { background: #c4141f; transform: translateY(-2px); }
+    .btn-primary:active { transform: scale(0.97); }
+
+    .btn-ghost-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5rem 0 0.4rem;
+      border-bottom: 1px solid rgba(201,150,42,0.4);
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+    .btn-ghost-gold:hover { color: var(--gold-lt); border-color: var(--gold-lt); }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      background: var(--gold);
+      color: var(--ink);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 1.1rem 2.4rem;
+      min-height: 48px; /* touch target */
+      text-decoration: none;
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-2px); }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      min-height: 100svh; /* safe viewport height — fixes iOS browser chrome */
+      background: var(--ink);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg-image { position: absolute; inset: 0; z-index: 0; }
+    .hero-bg-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .hero-bg-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, rgba(15,6,0,0.93) 0%, rgba(15,6,0,0.72) 50%, rgba(15,6,0,0.28) 100%),
+        linear-gradient(to top,   rgba(15,6,0,0.72) 0%, transparent 60%);
+    }
+    .hero-glow {
+      position: absolute;
+      top: 25%; left: -8%;
+      width: 650px; height: 650px;
+      background: radial-gradient(ellipse, rgba(232,25,44,0.07) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 10% 4% 8%;
+      max-width: 1300px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-eyebrow { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+    .gold-line { width: 40px; height: 1px; background: var(--gold); flex-shrink: 0; }
+
+    .hero-stats {
+      display: flex;
+      gap: 3.5rem;
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(201,150,42,0.18);
+    }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    /* ── PRODUCT CARD ── */
+    .product-card { position: relative; overflow: hidden; background: #180c02; cursor: pointer; }
+    .product-card-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .product-card:hover .product-card-img { transform: scale(1.06); }
+    .product-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(15,6,0,0.9) 0%, rgba(201,150,42,0.04) 45%, transparent 100%);
+    }
+    .product-card-text {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 1.5rem 1.25rem 1.25rem;
+      transform: translateY(4px);
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover .product-card-text { transform: translateY(0); }
+    .product-card-gold-line {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(to right, var(--gold), var(--red));
+      transition: width 0.4s ease;
+    }
+    .product-card:hover .product-card-gold-line { width: 100%; }
+
+    /* ── USP CARD ── */
+    .usp-card {
+      padding: 2.5rem 2rem;
+      border: 1px solid rgba(201,150,42,0.1);
+      background: rgba(201,150,42,0.02);
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+    .usp-card:hover { border-color: rgba(201,150,42,0.28); background: rgba(201,150,42,0.05); }
+
+    /* ── REVIEW CARD ── */
+    .review-card {
+      background: rgba(247,241,232,0.03);
+      border: 1px solid rgba(247,241,232,0.07);
+      padding: 2rem 2rem 1.75rem;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+    .review-card:hover { border-color: rgba(201,150,42,0.2); background: rgba(201,150,42,0.03); }
+    .star { color: var(--gold); }
+
+    /* ── FORM ── */
+    .form-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(247,241,232,0.18);
+      color: var(--cream);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      padding: 0.85rem 0;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    .form-input::placeholder { color: rgba(247,241,232,0.28); }
+    .form-input:focus { border-color: var(--gold); }
+    .form-label {
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(247,241,232,0.38);
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    /* ── IMG HOVER ── */
+    .img-hover { overflow: hidden; }
+    .img-hover img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: cover; display: block; }
+    .img-hover:hover img { transform: scale(1.04); }
+
+    /* ── CAT CARD ── */
+    .cat-card { position: relative; overflow: hidden; cursor: pointer; }
+    .cat-card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .cat-card:hover img { transform: scale(1.06); }
+    .cat-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(15,6,0,0.88) 0%, rgba(15,6,0,0.18) 55%, transparent 100%);
+      display: flex; align-items: flex-end; padding: 1.25rem;
+    }
+
+    /* ── BAKLAVA PILL ── */
+    .bak-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(201,150,42,0.08);
+      border: 1px solid rgba(201,150,42,0.25);
+      padding: 0.45rem 1rem;
+    }
+    .bak-pill span { color: var(--gold); font-size: 0.55rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; }
+
+    /* ── SHOP CELL ── */
+    .shop-cell {
+      background: rgba(15,6,0,0.06);
+      border: 1px solid rgba(15,6,0,0.1);
+      border-left: 2px solid var(--gold);
+      padding: 1.1rem;
+      transition: background 0.3s ease;
+    }
+
+    /* ── MEAT LIST ── */
+    .meat-item {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(247,241,232,0.06);
+    }
+    .meat-item:last-child { border-bottom: none; }
+
+    /* ── FOOTER ── */
+    #footer { background: #060200; border-top: 1px solid rgba(201,150,42,0.12); }
+    .footer-link {
+      color: rgba(247,241,232,0.4);
+      font-size: 0.75rem;
+      font-weight: 300;
+      text-decoration: none;
+      line-height: 2.2;
+      display: block;
+      transition: color 0.2s ease;
+    }
+    .footer-link:hover { color: var(--cream); }
+    .social-btn {
+      width: 38px; height: 38px;
+      border: 1px solid rgba(201,150,42,0.22);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+    .social-btn:hover { border-color: var(--gold); background: rgba(201,150,42,0.07); }
+    .social-btn svg { width: 15px; height: 15px; fill: rgba(247,241,232,0.5); transition: fill 0.3s ease; }
+    .social-btn:hover svg { fill: var(--gold); }
+
+    /* ── ABOUT QUOTE ── */
+    .about-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--cream);
+    }
+    .about-quote em { color: var(--gold); font-style: italic; }
+
+    /* ── HELAL STRIP ── */
+    .helal-strip {
+      border: 1px solid rgba(34,197,94,0.18);
+      background: rgba(34,197,94,0.03);
+      padding: 1.5rem 2rem;
+    }
+
+    /* ── TEA CALLOUT ── */
+    .tea-callout {
+      background: #0d0500;
+      position: relative;
+      overflow: hidden;
+    }
+    .tea-callout::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(ellipse, rgba(201,150,42,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .ticker-track { animation: none; }
+    }
+
+    /* ── FOCUS STATES ── */
+    .btn-primary:focus-visible,
+    .btn-gold:focus-visible,
+    .btn-ghost-gold:focus-visible,
+    .nav-cta:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+    .nav-link:focus-visible {
+      outline: 1px solid rgba(201,150,42,0.6);
+      outline-offset: 4px;
+    }
+
+    /* ── FOOTER HOVER VIA CSS ── */
+    .footer-contact-link {
+      color: rgba(247,241,232,0.38);
+      font-size: 0.8rem;
+      font-weight: 300;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: block;
+    }
+    .footer-contact-link:hover { color: rgba(247,241,232,0.82); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav-links    { display: none !important; }
+      .hamburger    { display: flex !important; }
+      .hide-mobile  { display: none !important; }
+
+      /* hero */
+      .hero-content { padding: 28% 5% 14%; }
+      .hero-heading { font-size: clamp(2.8rem, 12vw, 5rem); }
+      .hero-stats   { gap: 1.75rem; flex-wrap: wrap; margin-top: 2.5rem; }
+      .stat-num     { font-size: 2rem; }
+
+      /* base font size for readability on small screens */
+      body { font-size: 15px; }
+
+      section, footer { padding-left: 5% !important; padding-right: 5% !important; }
+
+      /* grids */
+      .two-col  { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+      .four-col { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
+
+      /* product bento: full-width hero, then 2 cols */
+      .bento-grid { grid-template-columns: 1fr 1fr !important; }
+      .bento-grid .bento-hero { grid-row: auto !important; grid-column: 1 / -1 !important; aspect-ratio: 16/8 !important; min-height: unset !important; }
+
+      .usp-four { grid-template-columns: 1fr 1fr !important; gap: 0 !important; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+      .reviews-two { grid-template-columns: 1fr !important; gap: 1rem !important; }
+      .products-hdr { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+
+      /* map height on mobile */
+      iframe { height: 280px !important; }
+
+      .section-heading { font-size: clamp(2rem, 9vw, 3.2rem) !important; }
+      .farm-h { height: 50vw !important; min-height: 240px; }
+
+      /* tea callout padding */
+      .tea-callout { padding: 14% 5% !important; }
+    }
+    @media (max-width: 480px) {
+      .hero-heading { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+      .hero-content { padding: 32% 5% 12%; }
+      .usp-card { padding: 1.5rem 1rem; }
+    }
+  </style>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "MeatEstablishment", "GroceryStore"],
+      "@id": "https://www.gurme-et.ro/#business",
+      "name": "Gurme Et",
+      "alternateName": "ROMETGURME SRL",
+      "description": "Măcelărie halal premium și delicatese turcești în Tunari, Ilfov. Carne de vită și miel 100% helal certificată, sucuk, pastirma, kavurma, baclava și produse alimentare turcești. Livrare în aceeași zi.",
+      "url": "https://www.gurme-et.ro/",
+      "telephone": "+40728999988",
+      "email": "contact@gurme-et.ro",
+      "foundingDate": "2009",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calea București 79",
+        "addressLocality": "Tunari",
+        "addressRegion": "Ilfov",
+        "postalCode": "077180",
+        "addressCountry": "RO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 44.5405057,
+        "longitude": 26.1428157
+      },
+      "hasMap": "https://maps.google.com/?cid=2741847659977503494",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "servesCuisine": ["Turkish", "Halal"],
+      "priceRange": "$$",
+      "currenciesAccepted": "RON",
+      "paymentAccepted": "Cash, Credit Card",
+      "image": "https://www.gurme-et.ro/images/hero-bg.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.gurme-et.ro/brand_assetmetns/gurm-et-logo.png"
+      },
+      "sameAs": [
+        "https://www.google.com/maps/place/Gurme+et/@44.5405057,26.1428157"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "100",
+        "ratingCount": "100"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Monica Leon" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Gurme Et nu este un magazin sau o măcelărie oarecare — este o experiență unică! Personalul deosebit de amabil nu vând produse, ci spun povestea din spatele fiecărui produs. Nu ai senzația că cheltuiești, ci că investești în cultura ta.",
+          "inLanguage": "ro",
+          "publisher": { "@type": "Organization", "name": "Google" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Isıl Birısık" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Since the day it opened, it has become our go-to butcher. Flavor, quality, and cleanliness all come together here. The owners are extremely friendly and always happy to help you choose the best cuts.",
+          "inLanguage": "en",
+          "publisher": { "@type": "Organization", "name": "Google" }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Adriana Merer" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+          "reviewBody": "Super calitate! Oameni super drăguți, care îți dau sfaturi și indicații de gătit! Produsele sunt proaspete și găsești tot ce dorești.",
+          "inLanguage": "ro",
+          "publisher": { "@type": "Organization", "name": "Google" }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.gurme-et.ro/#website",
+      "name": "Gurme Et",
+      "url": "https://www.gurme-et.ro/",
+      "description": "Măcelărie halal premium, delicatese turcești și baclava în Tunari, Ilfov, România.",
+      "inLanguage": "ro",
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://www.gurme-et.ro/#business",
+        "name": "Gurme Et"
+      }
+    }
+  ]
+  </script>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAVIGAȚIE
+══════════════════════════════════════════ -->
+<nav id="main-nav">
+  <a href="#" class="nav-logo">
+    <img src="brand_assetmetns/gurm-et-logo.png" alt="Gurme Et">
+  </a>
+
+  <div class="nav-links" id="nav-desktop">
+    <div class="halal-pill" style="margin-right:0.25rem;">
+      <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+        <path d="M5 1C2.79 1 1 2.79 1 5s1.79 4 4 4c.55 0 1.07-.11 1.55-.31A3.5 3.5 0 014.5 5a3.5 3.5 0 013.18-3.48A3.97 3.97 0 005 1z" fill="#4ade80"/>
+        <circle cx="7.5" cy="2.5" r="1" fill="#4ade80"/>
+      </svg>
+      <span>100% Helal</span>
+    </div>
+    <a href="#"        class="nav-link">Acasă</a>
+    <a href="#about"   class="nav-link">Despre</a>
+    <a href="#products"class="nav-link">Produse</a>
+    <a href="#reviews" class="nav-link">Recenzii</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="#contact" class="nav-cta" style="cursor:pointer;">Vizitează-ne</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Meniu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-drawer" id="mobile-drawer">
+  <a href="#"         class="nav-link" onclick="closeNav()">Acasă</a>
+  <a href="#about"    class="nav-link" onclick="closeNav()">Despre</a>
+  <a href="#products" class="nav-link" onclick="closeNav()">Produse</a>
+  <a href="#reviews"  class="nav-link" onclick="closeNav()">Recenzii</a>
+  <a href="#contact"  class="nav-link" onclick="closeNav()">Contact</a>
+  <a href="#contact"  class="nav-cta"  onclick="closeNav()">Vizitează-ne</a>
+</div>
+
+<script>
+  // Scroll behaviour
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  function toggleNav() {
+    document.getElementById('mobile-drawer').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+  function closeNav() {
+    document.getElementById('mobile-drawer').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+</script>
+
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg-image">
+    <img src="images/hero-bg.png" alt="Tăieturi premium de carne Gurme Et" fetchpriority="high">
+  </div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+    <div style="max-width:660px;">
+
+      <!-- eyebrow -->
+      <div class="hero-eyebrow">
+        <div class="gold-line"></div>
+        <span class="label-text" style="color:rgba(201,150,42,0.85);">Măcelărie Premium</span>
+        <div class="halal-pill" style="margin-left:0.25rem;">
+          <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+            <path d="M5 1C2.79 1 1 2.79 1 5s1.79 4 4 4c.55 0 1.07-.11 1.55-.31A3.5 3.5 0 014.5 5a3.5 3.5 0 013.18-3.48A3.97 3.97 0 005 1z" fill="#4ade80"/>
+            <circle cx="7.5" cy="2.5" r="1" fill="#4ade80"/>
+          </svg>
+          <span>100% Helal Certificat</span>
+        </div>
+      </div>
+
+      <!-- headline -->
+      <h1 class="hero-heading" style="color:var(--cream); margin-bottom:2.5rem;">
+        CARNE<br>
+        <em style="color:var(--red); font-style:normal;">DE CALITATE</em><br>
+        PREMIUM.
+      </h1>
+
+      <!-- body -->
+      <p style="font-size:0.92rem; line-height:1.88; font-weight:300; color:rgba(247,241,232,0.6); max-width:440px; margin-bottom:2.75rem;">
+        De la ferme de încredere direct la masa ta — fiecare tăietură
+        selectată manual și pregătită cu grijă de măcelarii noștri experți.
+        100% carne helal certificată.
+      </p>
+
+      <!-- CTAs -->
+      <div style="display:flex; align-items:center; gap:2rem; flex-wrap:wrap;">
+        <a href="#products" class="btn-primary">
+          Descoperă Produsele
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#about" class="btn-ghost-gold">Povestea Noastră</a>
+      </div>
+
+      <!-- stats -->
+      <div class="hero-stats">
+        <div>
+          <p class="stat-num">15+</p>
+          <p class="label-text" style="color:rgba(247,241,232,0.4); margin-top:0.5rem;">Ani Experiență</p>
+        </div>
+        <div>
+          <p class="stat-num">500+</p>
+          <p class="label-text" style="color:rgba(247,241,232,0.4); margin-top:0.5rem;">Clienți Mulțumiți</p>
+        </div>
+        <div>
+          <p class="stat-num">30+</p>
+          <p class="label-text" style="color:rgba(247,241,232,0.4); margin-top:0.5rem;">Tipuri de Carne</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     TICKER BANNER
+══════════════════════════════════════════ -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span>VITĂ &amp; MIEL</span><span class="sep">·</span>
+    <span>MĂCELĂRIE HELAL CERTIFICATĂ</span><span class="sep">·</span>
+    <span>PENTRU FAMILIA TA</span><span class="sep">·</span>
+    <span>DIN 2009</span><span class="sep">·</span>
+    <span>CALITATE PREMIUM</span><span class="sep">·</span>
+    <span>CALEA BUCUREȘTI 79, TUNARI</span><span class="sep">·</span>
+    <span>VITĂ &amp; MIEL</span><span class="sep">·</span>
+    <span>MĂCELĂRIE HELAL CERTIFICATĂ</span><span class="sep">·</span>
+    <span>PENTRU FAMILIA TA</span><span class="sep">·</span>
+    <span>DIN 2009</span><span class="sep">·</span>
+    <span>CALITATE PREMIUM</span><span class="sep">·</span>
+    <span>CALEA BUCUREȘTI 79, TUNARI</span><span class="sep">·</span>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     DESPRE NOI
+══════════════════════════════════════════ -->
+<section id="about" style="padding:9% 4%; background:var(--ink);">
+  <div style="max-width:1240px; margin:0 auto;">
+
+    <div class="reveal" style="max-width:680px; margin-bottom:5rem;">
+      <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+        <div class="gold-line"></div>
+        <span class="label-text" style="color:var(--gold);">Misiunea Noastră</span>
+      </div>
+      <h2 class="section-heading" style="color:var(--cream);">
+        Ne dedicăm livrării<br>
+        <em style="color:var(--red); font-style:italic;">celei mai fine cărni</em><br>
+        helal
+      </h2>
+    </div>
+
+    <div class="two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; margin-bottom:0;">
+
+      <!-- left -->
+      <div>
+        <p style="font-size:0.9rem; line-height:1.92; font-weight:300; color:rgba(247,241,232,0.58); margin-bottom:1.75rem;">
+          La Gurme Et, credem că mâncarea bună începe cu ingrediente excepționale.
+          Colaborăm direct cu ferme locale de încredere care împărtășesc angajamentul
+          nostru față de bunăstarea animalelor și practicile agricole durabile.
+          Toată carnea noastră este 100% helal certificată — promisiunea noastră față de dumneavoastră.
+        </p>
+        <p style="font-size:0.9rem; line-height:1.92; font-weight:300; color:rgba(247,241,232,0.58); margin-bottom:2.5rem;">
+          Măcelarii noștri experți aduc decenii de experiență în fiecare tăietură.
+          Suntem mândri de meșteșugul nostru, folosind tehnici tradiționale alături de
+          expertiza modernă pentru a vă oferi carne de cel mai înalt standard.
+          Calitatea nu este niciodată compromisă — este garanția noastră.
+        </p>
+
+        <!-- helal strip -->
+        <div class="helal-strip">
+          <div style="display:flex; align-items:flex-start; gap:2rem; flex-wrap:wrap;">
+            <div style="display:flex; align-items:center; gap:0.75rem; flex-shrink:0;">
+              <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+                <path d="M16 3C8.82 3 3 8.82 3 16s5.82 13 13 13c1.79 0 3.49-.36 5.03-1.01A11.38 11.38 0 0114.5 16a11.38 11.38 0 0110.33-11.31A12.93 12.93 0 0016 3z" fill="#4ade80"/>
+                <circle cx="24.5" cy="8.5" r="3" fill="#4ade80"/>
+              </svg>
+              <div>
+                <p style="color:#4ade80; font-size:0.58rem; font-weight:800; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.2rem;">100% Helal Certificat</p>
+                <p style="color:rgba(247,241,232,0.38); font-size:0.72rem; font-weight:300;">Toate produsele noastre sunt certificate helal</p>
+              </div>
+            </div>
+            <div style="width:1px; height:36px; background:rgba(247,241,232,0.07); flex-shrink:0;"></div>
+            <p style="color:rgba(247,241,232,0.42); font-size:0.78rem; font-weight:300; line-height:1.7;">
+              Procesul nostru de sacrificare respectă integral normele islamice.<br>
+              Fiecare lot este inspectat și certificat de autorități competente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- right: image + pull quote -->
+      <div>
+        <div class="img-hover" style="height:420px; position:relative; margin-bottom:2rem;">
+          <img src="images/despre-ferma.png" alt="Ferme partenere Gurme Et" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(15,6,0,0.55) 0%, transparent 60%);"></div>
+          <div style="position:absolute; bottom:1.5rem; left:1.5rem;">
+            <span class="label-text" style="color:rgba(247,241,232,0.55);">De la Fermă la Masă</span>
+          </div>
+        </div>
+        <blockquote class="about-quote" style="padding-left:1.25rem; border-left:2px solid rgba(201,150,42,0.3);">
+          „Fiecare tăietură spune povestea grijii noastre pentru <em>calitate autentică</em>."
+        </blockquote>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     OKTAY — MAESTRUL MĂCELAR
+══════════════════════════════════════════ -->
+<section style="padding:9% 4%; background:linear-gradient(180deg, var(--ink) 0%, #130800 50%, var(--ink) 100%); position:relative; overflow:hidden;">
+
+  <!-- decorative background circle -->
+  <div style="position:absolute; right:-10%; top:50%; transform:translateY(-50%); width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(201,150,42,0.04) 0%, transparent 70%); pointer-events:none;"></div>
+
+  <div style="max-width:1240px; margin:0 auto;">
+    <div class="two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;">
+
+      <!-- left: photo -->
+      <div class="reveal">
+        <div class="img-hover" style="position:relative; aspect-ratio:3/4; max-height:540px;">
+          <img src="images/oktay.png" alt="Oktay — Maestru Măcelar Gurme Et, 30 ani experiență" loading="lazy" style="width:100%; height:100%; object-fit:cover; object-position:top; display:block;">
+          <div style="position:absolute; inset:0; background:linear-gradient(to top, rgba(15,6,0,0.75) 0%, transparent 55%);"></div>
+          <!-- name badge -->
+          <div style="position:absolute; bottom:2rem; left:2rem; right:2rem;">
+            <p style="font-family:'Cormorant Garamond', serif; font-size:2.2rem; font-weight:700; color:var(--cream); line-height:1; margin-bottom:0.4rem;">Oktay</p>
+            <p class="label-text" style="color:var(--gold);">Maestru Măcelar · 30 de ani</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- right: text -->
+      <div class="reveal">
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+          <div class="gold-line"></div>
+          <span class="label-text" style="color:var(--gold);">Omul din spatele cărnii</span>
+        </div>
+
+        <h2 class="section-heading" style="color:var(--cream); margin-bottom:2rem;">
+          30 de ani de<br>
+          <em style="color:var(--gold); font-style:italic;">măiestrie</em><br>
+          și pasiune
+        </h2>
+
+        <p style="font-size:0.9rem; line-height:1.92; font-weight:300; color:rgba(247,241,232,0.58); margin-bottom:1.5rem;">
+          Oktay este inima Gurme Et. Cu peste <strong style="color:rgba(247,241,232,0.85); font-weight:500;">30 de ani de experiență</strong> în arta măcelăriei și gastronomiei, cunoaște carnea în profunzime — de la alegerea animalului potrivit până la tăietura perfectă care face diferența pe farfurie.
+        </p>
+
+        <p style="font-size:0.9rem; line-height:1.92; font-weight:300; color:rgba(247,241,232,0.58); margin-bottom:2.5rem;">
+          Format în tradiția culinară turcească, Oktay combină tehnicile clasice cu o înțelegere profundă a calității cărnii. Fiecare produs care iese din măcelăria noastră trece prin mâinile și prin judecata sa — o garanție pe care nu o veți găsi în altă parte.
+        </p>
+
+        <!-- credential badges -->
+        <div style="display:flex; flex-wrap:wrap; gap:1rem;">
+          <div style="display:flex; align-items:center; gap:0.65rem; padding:0.65rem 1.1rem; border:1px solid rgba(201,150,42,0.2); background:rgba(201,150,42,0.04);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(201,150,42,0.8)" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span style="font-size:0.72rem; font-weight:500; color:rgba(247,241,232,0.65); letter-spacing:0.05em;">30+ ani experiență</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.65rem; padding:0.65rem 1.1rem; border:1px solid rgba(201,150,42,0.2); background:rgba(201,150,42,0.04);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(201,150,42,0.8)" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span style="font-size:0.72rem; font-weight:500; color:rgba(247,241,232,0.65); letter-spacing:0.05em;">Tăieturi tradiționale turcești</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.65rem; padding:0.65rem 1.1rem; border:1px solid rgba(201,150,42,0.2); background:rgba(201,150,42,0.04);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(201,150,42,0.8)" stroke-width="1.5"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+            <span style="font-size:0.72rem; font-weight:500; color:rgba(247,241,232,0.65); letter-spacing:0.05em;">Artă culinară turcească</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     IMAGINE FERMĂ 1
+══════════════════════════════════════════ -->
+<div class="farm-h" style="position:relative; height:62vh; overflow:hidden;">
+  <img src="images/parallax-ferme.png" alt="Parteneri Fermieri — selectăm doar cele mai bune ferme" loading="lazy"
+       style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+  <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(15,6,0,0.9) 0%, rgba(15,6,0,0.28) 55%, transparent 100%);"></div>
+  <div style="position:absolute; inset:0; display:flex; align-items:center; padding:0 6%;">
+    <div style="max-width:560px;">
+      <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+        <div class="gold-line"></div>
+        <span class="label-text" style="color:rgba(201,150,42,0.72);">De la Fermă la Masă</span>
+      </div>
+      <h3 class="section-heading" style="color:var(--cream);">
+        Selectăm doar<br>cele mai bune<br>
+        <em style="color:var(--red); font-style:italic;">ferme</em>
+      </h3>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     IMAGINE FERMĂ 2
+══════════════════════════════════════════ -->
+<div class="farm-h" style="position:relative; height:54vh; overflow:hidden;">
+  <img src="images/parallax-vite.png" alt="Vite crescute la pășune — Gurme Et" loading="lazy"
+       style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+  <div style="position:absolute; inset:0; background:linear-gradient(to left, rgba(15,6,0,0.92) 0%, rgba(15,6,0,0.28) 55%, transparent 100%);"></div>
+  <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:flex-end; padding:0 6%;">
+    <div style="text-align:right; max-width:560px;">
+      <div style="display:flex; align-items:center; justify-content:flex-end; gap:1rem; margin-bottom:1.5rem;">
+        <span class="label-text" style="color:rgba(201,150,42,0.72);">Crescut Etic &amp; Helal</span>
+        <div class="gold-line"></div>
+      </div>
+      <h3 class="section-heading" style="color:var(--cream);">
+        Ne asigurăm că doar<br>
+        vitele <em style="color:var(--red); font-style:italic;">crescute la pășune</em><br>
+        ajung la dumneavoastră
+      </h3>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PRODUSE — TĂIETURI PREMIUM
+══════════════════════════════════════════ -->
+<section id="products" style="padding:9% 4%; background:#0a0500;">
+  <div style="max-width:1240px; margin:0 auto;">
+
+    <!-- header -->
+    <div class="products-hdr" style="display:grid; grid-template-columns:1fr 1.5fr; gap:4rem; align-items:end; margin-bottom:4rem;">
+      <div>
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+          <div class="gold-line"></div>
+          <span class="label-text" style="color:var(--gold);">Selecția Noastră</span>
+        </div>
+        <h2 class="section-heading" style="color:var(--cream);">
+          Selectăm<br>
+          <em style="color:var(--red); font-style:italic;">doar<br>calitate</em>
+        </h2>
+      </div>
+      <p style="font-size:0.9rem; line-height:1.9; font-weight:300; color:rgba(247,241,232,0.5); align-self:end;">
+        Selecția noastră de tăieturi premium este inegalabilă. De la coaste de vită marmorate
+        la file fragede, fiecare bucată este selectată manual pentru a vă asigura că primiți
+        doar ce e mai bun. Toată carnea noastră este 100% helal certificată.
+      </p>
+    </div>
+
+    <!-- bento grid -->
+    <div class="bento-grid" style="display:grid; grid-template-columns:1.4fr 1fr 1fr; grid-template-rows:auto auto; gap:1rem; margin-bottom:3rem;">
+
+      <!-- hero card — spans 2 rows -->
+      <div class="product-card bento-hero reveal" style="grid-row:1/3; min-height:520px;">
+        <img class="product-card-img" src="images/antricot.png" alt="Antricot de Vită — Gurme Et" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="product-card-overlay"></div>
+        <div class="product-card-text">
+          <span class="label-text" style="color:rgba(201,150,42,0.62); display:block; margin-bottom:0.4rem;">Tăietură Premium · Helal</span>
+          <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.45rem; font-weight:600; letter-spacing:0.01em;">Antricot de Vită</p>
+        </div>
+        <div class="product-card-gold-line"></div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-1" style="aspect-ratio:4/3;">
+        <img class="product-card-img" src="images/muschi-de-vita.png" alt="Mușchi de Vită — Gurme Et" loading="lazy">
+        <div class="product-card-overlay"></div>
+        <div class="product-card-text">
+          <span class="label-text" style="color:rgba(201,150,42,0.62); display:block; margin-bottom:0.4rem;">Tăietură Premium · Helal</span>
+          <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.18rem; font-weight:600; letter-spacing:0.01em;">Mușchi de Vită</p>
+        </div>
+        <div class="product-card-gold-line"></div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-2" style="aspect-ratio:4/3;">
+        <img class="product-card-img" src="images/tbone.png" alt="T-Bone Vită — Gurme Et" loading="lazy">
+        <div class="product-card-overlay"></div>
+        <div class="product-card-text">
+          <span class="label-text" style="color:rgba(201,150,42,0.62); display:block; margin-bottom:0.4rem;">Tăietură Premium · Helal</span>
+          <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.18rem; font-weight:600; letter-spacing:0.01em;">T-Bone Vită</p>
+        </div>
+        <div class="product-card-gold-line"></div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-1" style="aspect-ratio:4/3;">
+        <img class="product-card-img" src="images/cotlet-de-miel.png" alt="Cotlet de Miel — Gurme Et" loading="lazy">
+        <div class="product-card-overlay"></div>
+        <div class="product-card-text">
+          <span class="label-text" style="color:rgba(201,150,42,0.62); display:block; margin-bottom:0.4rem;">Tăietură Premium · Helal</span>
+          <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.18rem; font-weight:600; letter-spacing:0.01em;">Cotlet de Miel</p>
+        </div>
+        <div class="product-card-gold-line"></div>
+      </div>
+
+      <div class="product-card reveal reveal-delay-2" style="aspect-ratio:4/3;">
+        <img class="product-card-img" src="images/selectie-speciala.png" alt="Tăieturi Premium — Gurme Et" loading="lazy">
+        <div class="product-card-overlay"></div>
+        <div class="product-card-text">
+          <span class="label-text" style="color:rgba(201,150,42,0.62); display:block; margin-bottom:0.4rem;">Tăietură Premium · Helal</span>
+          <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.18rem; font-weight:600; letter-spacing:0.01em;">Selecție Specială</p>
+        </div>
+        <div class="product-card-gold-line"></div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;">
+      <a href="#contact" class="btn-primary" style="cursor:pointer;">
+        Vezi Toate Produsele
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     USP
+══════════════════════════════════════════ -->
+<section style="padding:9% 4%; background:var(--ink);">
+  <div style="max-width:1240px; margin:0 auto;">
+
+    <div class="reveal" style="text-align:center; margin-bottom:5rem;">
+      <div style="display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:1.5rem;">
+        <div class="gold-line"></div>
+        <span class="label-text" style="color:var(--gold);">De Ce Ne Alegeți</span>
+        <div class="gold-line"></div>
+      </div>
+      <h2 class="section-heading" style="color:var(--cream);">
+        Avem tot<br><em style="color:var(--red); font-style:italic;">ce vă trebuie</em>
+      </h2>
+    </div>
+
+    <div class="usp-four" style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(201,150,42,0.07);">
+
+      <div class="usp-card" style="text-align:center;">
+        <div style="width:52px; height:52px; margin:0 auto 1.5rem; display:flex; align-items:center; justify-content:center;">
+          <svg viewBox="0 0 56 56" fill="none" style="width:44px;height:44px;">
+            <rect x="4" y="16" width="32" height="22" rx="2" stroke="#C9962A" stroke-width="1.5"/>
+            <path d="M36 24h8l6 8v6h-14V24z" stroke="#C9962A" stroke-width="1.5" stroke-linejoin="round"/>
+            <circle cx="14" cy="40" r="4" stroke="#C9962A" stroke-width="1.5"/>
+            <circle cx="42" cy="40" r="4" stroke="#C9962A" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--cream); margin-bottom:0.75rem;">Livrare în Aceeași Zi</h3>
+        <p style="font-size:0.78rem; line-height:1.82; color:rgba(247,241,232,0.42); font-weight:300;">Comandați înainte de prânz și primiți comanda în aceeași zi direct la ușă.</p>
+      </div>
+
+      <div class="usp-card" style="text-align:center;">
+        <div style="width:52px; height:52px; margin:0 auto 1.5rem; display:flex; align-items:center; justify-content:center;">
+          <svg viewBox="0 0 56 56" fill="none" style="width:44px;height:44px;">
+            <path d="M28 6l4.9 14.9H49l-12.5 9.1 4.8 14.8L28 36l-13.3 8.8 4.8-14.8L7 20.9h16.1z" stroke="#C9962A" stroke-width="1.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--cream); margin-bottom:0.75rem;">Proaspăt în Fiecare Zi</h3>
+        <p style="font-size:0.78rem; line-height:1.82; color:rgba(247,241,232,0.42); font-weight:300;">Toate tăieturile sunt pregătite proaspăt în fiecare dimineață de echipa noastră expertă.</p>
+      </div>
+
+      <div class="usp-card" style="text-align:center;">
+        <div style="width:52px; height:52px; margin:0 auto 1.5rem; display:flex; align-items:center; justify-content:center;">
+          <svg viewBox="0 0 56 56" fill="none" style="width:44px;height:44px;">
+            <path d="M28 8C17.5 8 9 16.5 9 27s8.5 19 19 19c2.6 0 5.1-.52 7.35-1.47A16.2 16.2 0 0121 27 16.2 16.2 0 0135.7 10.93 18.87 18.87 0 0028 8z" stroke="#C9962A" stroke-width="1.5"/>
+            <circle cx="37" cy="12" r="3.5" stroke="#C9962A" stroke-width="1.5"/>
+            <path d="M22 27l5 5 9-9" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--cream); margin-bottom:0.75rem;">100% Helal Certificat</h3>
+        <p style="font-size:0.78rem; line-height:1.82; color:rgba(247,241,232,0.42); font-weight:300;">Toate produsele noastre sunt certificate helal. Sacrificare conform normelor islamice.</p>
+      </div>
+
+      <div class="usp-card" style="text-align:center;">
+        <div style="width:52px; height:52px; margin:0 auto 1.5rem; display:flex; align-items:center; justify-content:center;">
+          <svg viewBox="0 0 56 56" fill="none" style="width:44px;height:44px;">
+            <path d="M14 42C14 42 14 20 36 10c0 0 6 20-10 28" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 42L28 28" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--cream); margin-bottom:0.75rem;">De la Fermă la Masă</h3>
+        <p style="font-size:0.78rem; line-height:1.82; color:rgba(247,241,232,0.42); font-weight:300;">Aprovizionare trasabilă de la ferme etice și sustenabile în care avem încredere deplină.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     BAKLAVA & DULCIURI
+══════════════════════════════════════════ -->
+<section style="padding:9% 4%; background:#0a0500;">
+  <div style="max-width:1240px; margin:0 auto;">
+
+    <div class="reveal" style="text-align:center; margin-bottom:4rem;">
+      <div style="display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:1.5rem;">
+        <div class="gold-line"></div>
+        <span class="label-text" style="color:var(--gold);">Dulciuri Orientale Autentice</span>
+        <div class="gold-line"></div>
+      </div>
+      <h2 class="section-heading" style="color:var(--cream);">
+        Baklava &amp;<br><em style="color:var(--gold); font-style:italic;">Dulciuri</em>
+      </h2>
+    </div>
+
+    <div class="four-col" style="display:grid; grid-template-columns:repeat(4,1fr); gap:1rem;">
+      <div class="cat-card" style="aspect-ratio:3/4;">
+        <img src="images/kadaif.png" alt="Kadayıf — Gurme Et" loading="lazy">
+        <div class="cat-overlay">
+          <div>
+            <span class="label-text" style="color:var(--gold); display:block; margin-bottom:0.3rem;">Dulciuri Orientale</span>
+            <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.08rem; font-weight:600;">Kadayıf</p>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card" style="aspect-ratio:3/4;">
+        <img src="images/baklava.png" alt="Baklava Asortată — Gurme Et" loading="lazy">
+        <div class="cat-overlay">
+          <div>
+            <span class="label-text" style="color:var(--gold); display:block; margin-bottom:0.3rem;">Dulciuri Orientale</span>
+            <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.08rem; font-weight:600;">Baklava Asortată</p>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card" style="aspect-ratio:3/4;">
+        <img src="images/lokum.png" alt="Lokum — Gurme Et" loading="lazy">
+        <div class="cat-overlay">
+          <div>
+            <span class="label-text" style="color:var(--gold); display:block; margin-bottom:0.3rem;">Dulciuri Orientale</span>
+            <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.08rem; font-weight:600;">Lokum</p>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card" style="aspect-ratio:3/4;">
+        <img src="images/dulciuri-orientale.png" alt="Dulciuri Orientale — Gurme Et" loading="lazy">
+        <div class="cat-overlay">
+          <div>
+            <span class="label-text" style="color:var(--gold); display:block; margin-bottom:0.3rem;">Dulciuri Orientale</span>
+            <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1.08rem; font-weight:600;">Dulciuri Orientale</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     BAKLAVA FEATURE
+══════════════════════════════════════════ -->
+<section style="background:#100800; position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background:radial-gradient(ellipse at 70% 50%, rgba(201,150,42,0.07) 0%, transparent 65%); pointer-events:none;"></div>
+
+  <div class="two-col" style="max-width:1400px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; min-height:640px;">
+
+    <!-- image -->
+    <div class="img-hover" style="position:relative; overflow:hidden; min-height:480px;">
+      <img src="images/baklava-featured.png" alt="Baklava cu Unt Proaspăt — Gurme Et" loading="lazy"
+           style="width:100%; height:100%; object-fit:cover; display:block;">
+      <div style="position:absolute; inset:0; background:linear-gradient(to right, transparent 45%, #100800 100%);"></div>
+      <div style="position:absolute; top:2rem; left:2rem;">
+        <div class="bak-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Preparat cu Unt Proaspăt</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- text -->
+    <div style="display:flex; flex-direction:column; justify-content:center; padding:6% 6% 6% 4%; position:relative; z-index:1;">
+
+      <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.75rem;">
+        <div class="gold-line"></div>
+        <span class="label-text" style="color:var(--gold);">Specialitatea Casei</span>
+      </div>
+
+      <h2 class="section-heading" style="color:var(--cream); margin-bottom:2rem;">
+        Baklava<br>
+        <em style="color:var(--gold); font-style:italic;">cu unt</em><br>
+        autentic
+      </h2>
+
+      <p style="color:rgba(247,241,232,0.55); font-size:0.9rem; line-height:1.92; font-weight:300; max-width:420px; margin-bottom:2.5rem;">
+        Baklavalele noastre sunt preparate după rețeta tradițională turcească,
+        exclusiv cu <strong style="color:rgba(247,241,232,0.85); font-weight:500;">unt proaspăt de cea mai înaltă calitate</strong> —
+        niciodată margarină. Fiecare strat de aluat subțire, fiecare fistic
+        selectată, fiecare picătură de sirop de miere contribuie la
+        gustul autentic pe care nu îl vei găsi altundeva.
+      </p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-bottom:2.5rem;">
+        <div class="bak-pill">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>100% Unt Proaspăt</span>
+        </div>
+        <div class="bak-pill">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          <span>Sirop Natural</span>
+        </div>
+        <div class="bak-pill">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+          <span>Rețetă Tradițională</span>
+        </div>
+        <div class="bak-pill">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Proaspătă Zilnic</span>
+        </div>
+      </div>
+
+      <div style="width:40px; height:1px; background:rgba(201,150,42,0.3); margin-bottom:2rem;"></div>
+
+      <blockquote style="margin:0; padding:0 0 0 1.25rem; border-left:1px solid rgba(201,150,42,0.28);">
+        <p style="font-family:'Cormorant Garamond',serif; color:rgba(247,241,232,0.45); font-size:1.08rem; line-height:1.72; font-weight:400; font-style:italic;">
+          „Nu există baklava adevărată fără unt proaspăt —<br>
+          este secretul texturii crocante și al gustului bogat."
+        </p>
+        <p style="color:var(--gold); font-size:0.55rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; margin-top:0.85rem;">— Maestrul Cofetar, Gurme Et</p>
+      </blockquote>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     MEZELURI HELAL
+══════════════════════════════════════════ -->
+<section style="padding:9% 4%; background:var(--ink);">
+  <div style="max-width:1240px; margin:0 auto;">
+    <div class="two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;">
+
+      <!-- text -->
+      <div>
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+          <div class="gold-line"></div>
+          <span class="label-text" style="color:var(--gold);">Produse Tradiționale Turce</span>
+        </div>
+        <h2 class="section-heading" style="color:var(--cream); margin-bottom:2rem;">
+          Mezeluri<br><em style="color:var(--red); font-style:italic;">Helal</em>
+        </h2>
+        <p style="color:rgba(247,241,232,0.5); font-size:0.9rem; line-height:1.92; font-weight:300; margin-bottom:2.5rem;">
+          De la cârnații picant sucuk până la pastırma afumată — toate preparate tradițional
+          și certificate helal. Gustul autentic turcesc direct pe masa dumneavoastră.
+        </p>
+        <div>
+          <div class="meat-item">
+            <div style="width:4px; height:4px; background:var(--gold); border-radius:50%; flex-shrink:0;"></div>
+            <span style="color:rgba(247,241,232,0.75); font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">Sucuk — Cârnat Turcesc</span>
+          </div>
+          <div class="meat-item">
+            <div style="width:4px; height:4px; background:var(--gold); border-radius:50%; flex-shrink:0;"></div>
+            <span style="color:rgba(247,241,232,0.75); font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">Pastırma — Carne Afumată</span>
+          </div>
+          <div class="meat-item">
+            <div style="width:4px; height:4px; background:var(--gold); border-radius:50%; flex-shrink:0;"></div>
+            <span style="color:rgba(247,241,232,0.75); font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">Kavurma — Carne Sotată</span>
+          </div>
+          <div class="meat-item">
+            <div style="width:4px; height:4px; background:var(--gold); border-radius:50%; flex-shrink:0;"></div>
+            <span style="color:rgba(247,241,232,0.75); font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase;">Cârnați Helal Asortați</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2×2 image grid -->
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+        <div class="product-card" style="aspect-ratio:1;">
+          <img class="product-card-img" src="images/sucuk.png" alt="Sucuk — Cârnat Turcesc Helal" loading="lazy">
+          <div class="product-card-overlay"></div>
+          <div class="product-card-text">
+            <span class="label-text" style="color:rgba(201,150,42,0.6); display:block; margin-bottom:0.3rem;">Helal</span>
+            <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1rem; font-weight:600;">Sucuk</p>
+          </div>
+          <div class="product-card-gold-line"></div>
+        </div>
+        <div class="product-card" style="aspect-ratio:1;">
+          <img class="product-card-img" src="images/pastirma.png" alt="Pastırma — Carne Afumată Helal" loading="lazy">
+          <div class="product-card-overlay"></div>
+          <div class="product-card-text">
+            <span class="label-text" style="color:rgba(201,150,42,0.6); display:block; margin-bottom:0.3rem;">Helal</span>
+            <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1rem; font-weight:600;">Pastırma</p>
+          </div>
+          <div class="product-card-gold-line"></div>
+        </div>
+        <div class="product-card" style="aspect-ratio:1;">
+          <img class="product-card-img" src="images/kavurma.png" alt="Kavurma — Carne Sotată Helal" loading="lazy">
+          <div class="product-card-overlay"></div>
+          <div class="product-card-text">
+            <span class="label-text" style="color:rgba(201,150,42,0.6); display:block; margin-bottom:0.3rem;">Helal</span>
+            <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1rem; font-weight:600;">Kavurma</p>
+          </div>
+          <div class="product-card-gold-line"></div>
+        </div>
+        <div class="product-card" style="aspect-ratio:1;">
+          <img class="product-card-img" src="images/carnati-helal.png" alt="Cârnați Helal Asortați — Gurme Et" loading="lazy">
+          <div class="product-card-overlay"></div>
+          <div class="product-card-text">
+            <span class="label-text" style="color:rgba(201,150,42,0.6); display:block; margin-bottom:0.3rem;">Helal</span>
+            <p style="font-family:'Cormorant Garamond',serif; color:var(--cream); font-size:1rem; font-weight:600;">Cârnați Helal</p>
+          </div>
+          <div class="product-card-gold-line"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     MEZE & SPECIALITĂȚI
+══════════════════════════════════════════ -->
+<section style="padding:9% 4%; background:#0a0500;">
+  <div style="max-width:1240px; margin:0 auto;">
+
+    <div class="reveal" style="text-align:center; margin-bottom:5rem;">
+      <div style="display:flex; align-items:center; justify-content:center; gap:1rem; margin-bottom:1.5rem;">
+        <div class="gold-line"></div>
+        <span class="label-text" style="color:var(--gold);">Bucătărie Orientală Autentică</span>
+        <div class="gold-line"></div>
+      </div>
+      <h2 class="section-heading" style="color:var(--cream);">
+        Meze &amp;<br><em style="color:var(--red); font-style:italic;">Specialități</em>
+      </h2>
+    </div>
+
+    <div class="usp-four" style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(201,150,42,0.06);">
+
+      <div class="usp-card" style="text-align:center;">
+        <div style="width:50px; height:50px; margin:0 auto 1.25rem; border:1px solid rgba(201,150,42,0.2); display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:600; color:var(--cream); margin-bottom:0.75rem;">Humus Artizanal</h3>
+        <p style="font-size:0.78rem; line-height:1.82; color:rgba(247,241,232,0.4); font-weight:300;">Preparat zilnic din năut selectat și tahini autentic.</p>
+      </div>
+
+      <div class="usp-card" style="text-align:center;">
+        <div style="width:50px; height:50px; margin:0 auto 1.25rem; border:1px solid rgba(201,150,42,0.2); display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round">
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 8v4l3 3"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:600; color:var(--cream); margin-bottom:0.75rem;">Tabbouleh Proaspăt</h3>
+        <p style="font-size:0.78rem; line-height:1.82; color:rgba(247,241,232,0.4); font-weight:300;">Salată levantină cu bulgur, roșii, pătrunjel și lămâie.</p>
+      </div>
+
+      <div class="usp-card" style="text-align:center;">
+        <div style="width:50px; height:50px; margin:0 auto 1.25rem; border:1px solid rgba(201,150,42,0.2); display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round">
+            <path d="M3 12h18M3 6h18M3 18h18"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:600; color:var(--cream); margin-bottom:0.75rem;">Sarmale / Dolma</h3>
+        <p style="font-size:0.78rem; line-height:1.82; color:rgba(247,241,232,0.4); font-weight:300;">Frunze de viță umplute cu orez, ierburi și carne helal.</p>
+      </div>
+
+      <div class="usp-card" style="text-align:center;">
+        <div style="width:50px; height:50px; margin:0 auto 1.25rem; border:1px solid rgba(201,150,42,0.2); display:flex; align-items:center; justify-content:center;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:600; color:var(--cream); margin-bottom:0.75rem;">Meze Asortate</h3>
+        <p style="font-size:0.78rem; line-height:1.82; color:rgba(247,241,232,0.4); font-weight:300;">Selecție variată de aperitive orientale pentru orice ocazie.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     MAGAZIN ALIMENTAR TURCESC
+══════════════════════════════════════════ -->
+<section style="padding:9% 4%; background:var(--cream);">
+  <div style="max-width:1240px; margin:0 auto;">
+    <div class="two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center;">
+
+      <div>
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+          <div style="width:40px; height:1px; background:var(--red); flex-shrink:0;"></div>
+          <span class="label-text" style="color:var(--red);">Import Direct din Turcia</span>
+        </div>
+        <h2 class="section-heading" style="color:var(--ink); margin-bottom:2rem;">
+          Magazin<br>alimentar<br>
+          <em style="color:var(--red); font-style:italic;">turcesc</em>
+        </h2>
+        <p style="font-size:0.9rem; line-height:1.92; font-weight:400; color:#6b5a4a; margin-bottom:2.5rem;">
+          Găsiți la noi tot ce aveți nevoie pentru o bucătărie orientală autentică.
+          Produse importate direct din Turcia — condimente, sosuri, conserve, paste și mult mai mult.
+        </p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+          <div class="shop-cell">
+            <p style="font-size:0.6rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink); margin-bottom:0.3rem;">Condimente</p>
+            <p style="font-size:0.75rem; color:#8a7360; font-weight:300;">Turce &amp; Orientale</p>
+          </div>
+          <div class="shop-cell">
+            <p style="font-size:0.6rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink); margin-bottom:0.3rem;">Ceaiuri</p>
+            <p style="font-size:0.75rem; color:#8a7360; font-weight:300;">Çay &amp; Ierburi</p>
+          </div>
+          <div class="shop-cell">
+            <p style="font-size:0.6rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink); margin-bottom:0.3rem;">Conserve &amp; Paste</p>
+            <p style="font-size:0.75rem; color:#8a7360; font-weight:300;">Produse Tradiționale</p>
+          </div>
+          <div class="shop-cell">
+            <p style="font-size:0.6rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink); margin-bottom:0.3rem;">Sosuri &amp; Uleiuri</p>
+            <p style="font-size:0.75rem; color:#8a7360; font-weight:300;">Import Direct</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-hover" style="height:500px; overflow:hidden;">
+        <img src="images/magazin-turcesc.png" alt="Magazin Alimentar Turcesc — Gurme Et" loading="lazy"
+             style="width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     CEAI GRATUIT
+══════════════════════════════════════════ -->
+<section class="tea-callout" style="padding:9% 4%; text-align:center;">
+  <div style="max-width:660px; margin:0 auto; position:relative; z-index:1;">
+
+    <div style="display:inline-flex; align-items:center; gap:0.75rem; background:rgba(201,150,42,0.08); border:1px solid rgba(201,150,42,0.22); padding:5px 18px; margin-bottom:2rem;">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="1.8" stroke-linecap="round">
+        <path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>
+        <line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+      </svg>
+      <span class="label-text" style="color:var(--gold);">Ofertă Specială</span>
+    </div>
+
+    <h2 class="section-heading" style="color:var(--cream); margin-bottom:1.5rem;">
+      Ceai gratuit<br><em style="color:var(--gold); font-style:italic;">din partea casei</em>
+    </h2>
+
+    <p style="color:rgba(247,241,232,0.5); font-size:0.92rem; line-height:1.9; font-weight:300; margin-bottom:3rem;">
+      Fiecare client care ne vizitează magazinul primește un ceai turcesc tradițional
+      din partea noastră. Vă așteptăm cu căldură!
+    </p>
+
+    <a href="#contact" class="btn-gold" style="cursor:pointer;">Vizitați-ne Astăzi</a>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     RECENZII GOOGLE
+══════════════════════════════════════════ -->
+<section id="reviews" style="padding:9% 4%; background:var(--ink);">
+  <div style="max-width:1240px; margin:0 auto;">
+
+    <!-- header + rating badge -->
+    <div class="reveal" style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:4.5rem; flex-wrap:wrap; gap:2rem;">
+      <div>
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+          <div class="gold-line"></div>
+          <span class="label-text" style="color:var(--gold);">Recenzii Verificate</span>
+        </div>
+        <h2 class="section-heading" style="color:var(--cream);">
+          Ce spun<br><em style="color:var(--red); font-style:italic;">clienții</em>
+        </h2>
+      </div>
+      <div style="text-align:center; padding:2rem 2.5rem; border:1px solid rgba(201,150,42,0.18); background:rgba(201,150,42,0.03);">
+        <div style="display:flex; align-items:center; gap:0.5rem; justify-content:center; margin-bottom:0.75rem;">
+          <svg width="17" height="17" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+          </svg>
+          <span class="label-text" style="color:rgba(247,241,232,0.35);">Google Reviews</span>
+        </div>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:3.5rem; font-weight:700; color:var(--cream); line-height:1;">5.0</p>
+        <div style="color:var(--gold); font-size:0.9rem; letter-spacing:0.08em; margin:0.5rem 0;">★★★★★</div>
+        <p class="label-text" style="color:rgba(247,241,232,0.3);">Bazat pe 100+ recenzii</p>
+      </div>
+    </div>
+
+    <!-- reviews grid -->
+    <div class="reviews-two" style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(201,150,42,0.05);">
+
+      <div class="review-card">
+        <div style="display:flex; align-items:center; gap:0.875rem; margin-bottom:1.25rem;">
+          <div style="width:40px; height:40px; border-radius:50%; background:#34a853; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <span style="color:white; font-size:0.68rem; font-weight:700;">ML</span>
+          </div>
+          <div>
+            <p style="font-size:0.82rem; font-weight:600; color:var(--cream); margin-bottom:0.3rem;">Monica Leon</p>
+            <div style="display:flex; align-items:center; gap:0.4rem;">
+              <span class="star" style="font-size:0.68rem; letter-spacing:0.04em;">★★★★★</span>
+              <span class="label-text" style="color:rgba(247,241,232,0.28);">pe Google</span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:0.83rem; line-height:1.88; color:rgba(247,241,232,0.52); font-weight:300;">
+          „Gurme Et nu este un magazin sau o măcelărie oarecare — este o experiență unică! Personalul deosebit de amabil nu vând produse, ci spun povestea din spatele fiecărui produs. Nu ai senzația că cheltuiești, ci că investești în cultura ta. Primul magazin din care am simțit că ies mai bogată decât am intrat!"
+        </p>
+      </div>
+
+      <div class="review-card">
+        <div style="display:flex; align-items:center; gap:0.875rem; margin-bottom:1.25rem;">
+          <div style="width:40px; height:40px; border-radius:50%; background:var(--red); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <span style="color:white; font-size:0.68rem; font-weight:700;">E</span>
+          </div>
+          <div>
+            <p style="font-size:0.82rem; font-weight:600; color:var(--cream); margin-bottom:0.3rem;">Eliza</p>
+            <div style="display:flex; align-items:center; gap:0.4rem;">
+              <span class="star" style="font-size:0.68rem; letter-spacing:0.04em;">★★★★★</span>
+              <span class="label-text" style="color:rgba(247,241,232,0.28);">pe Google</span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:0.83rem; line-height:1.88; color:rgba(247,241,232,0.52); font-weight:300;">
+          „Am rămas foarte plăcut surprinsă de preparatele din carne. Totul a fost proaspăt, suculent, bine condimentat și extrem de fraged. Deși, în mod normal, nu mănânc vită sau miel, aici am reușit să mă bucur de ambele. Îi recomand cu drag!"
+        </p>
+      </div>
+
+      <div class="review-card">
+        <div style="display:flex; align-items:center; gap:0.875rem; margin-bottom:1.25rem;">
+          <div style="width:40px; height:40px; border-radius:50%; background:#4285F4; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <span style="color:white; font-size:0.68rem; font-weight:700;">IB</span>
+          </div>
+          <div>
+            <p style="font-size:0.82rem; font-weight:600; color:var(--cream); margin-bottom:0.3rem;">Isıl Birısık</p>
+            <div style="display:flex; align-items:center; gap:0.4rem;">
+              <span class="star" style="font-size:0.68rem; letter-spacing:0.04em;">★★★★★</span>
+              <span class="label-text" style="color:rgba(247,241,232,0.28);">pe Google</span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:0.83rem; line-height:1.88; color:rgba(247,241,232,0.52); font-weight:300;" lang="en">
+          „Since the day it opened, it has become our go-to butcher. Flavor, quality, and cleanliness all come together here. The owners are extremely friendly and always happy to help you choose the best cuts. For a warm, welcoming, and enjoyable shopping experience, this is definitely a place you should visit."
+        </p>
+      </div>
+
+      <div class="review-card">
+        <div style="display:flex; align-items:center; gap:0.875rem; margin-bottom:1.25rem;">
+          <div style="width:40px; height:40px; border-radius:50%; background:var(--gold); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <span style="color:var(--ink); font-size:0.68rem; font-weight:700;">AM</span>
+          </div>
+          <div>
+            <p style="font-size:0.82rem; font-weight:600; color:var(--cream); margin-bottom:0.3rem;">Adriana Merer</p>
+            <div style="display:flex; align-items:center; gap:0.4rem;">
+              <span class="star" style="font-size:0.68rem; letter-spacing:0.04em;">★★★★★</span>
+              <span class="label-text" style="color:rgba(247,241,232,0.28);">pe Google</span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:0.83rem; line-height:1.88; color:rgba(247,241,232,0.52); font-weight:300;">
+          „Super calitate! Oameni super drăguți, care îți dau sfaturi și indicații de gătit! Produsele sunt proaspete și găsești tot ce dorești."
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     CONTACT & GOOGLE MAPS
+══════════════════════════════════════════ -->
+<section id="contact" style="padding:9% 4%; background:#080300;">
+  <div style="max-width:1240px; margin:0 auto;">
+    <div class="two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start;">
+
+      <!-- contact info -->
+      <div>
+        <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+          <div class="gold-line"></div>
+          <span class="label-text" style="color:var(--gold);">Vizitați-ne</span>
+        </div>
+        <h2 class="section-heading" style="color:var(--cream); margin-bottom:3rem;">
+          Găsiți-ne<br><em style="color:var(--red); font-style:italic;">ușor</em>
+        </h2>
+
+        <div style="display:flex; flex-direction:column; gap:2rem; margin-bottom:3.5rem;">
+
+          <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+            <div style="width:40px; height:40px; border:1px solid rgba(201,150,42,0.18); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <span class="label-text" style="color:rgba(247,241,232,0.28); display:block; margin-bottom:0.5rem;">Adresă</span>
+              <p style="color:rgba(247,241,232,0.78); font-size:0.88rem; font-weight:300; line-height:1.72;">Calea București 79, Tunari, Ilfov 077180</p>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+            <div style="width:40px; height:40px; border:1px solid rgba(201,150,42,0.18); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="label-text" style="color:rgba(247,241,232,0.28); display:block; margin-bottom:0.5rem;">Telefon</span>
+              <a href="tel:+40728999988" style="color:rgba(247,241,232,0.78); font-size:0.88rem; font-weight:300; text-decoration:none;">+40 728 99 99 88</a>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+            <div style="width:40px; height:40px; border:1px solid rgba(201,150,42,0.18); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <span class="label-text" style="color:rgba(247,241,232,0.28); display:block; margin-bottom:0.5rem;">Program</span>
+              <p style="color:rgba(247,241,232,0.78); font-size:0.88rem; font-weight:300; line-height:1.9;">
+                Luni – Sâmbătă: 09:00 – 21:00<br>
+                Duminică: 09:00 – 20:00
+              </p>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:1.25rem; align-items:flex-start;">
+            <div style="width:40px; height:40px; border:1px solid rgba(201,150,42,0.18); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9962A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <span class="label-text" style="color:rgba(247,241,232,0.28); display:block; margin-bottom:0.5rem;">Email</span>
+              <a href="mailto:contact@gurme-et.ro" style="color:rgba(247,241,232,0.78); font-size:0.88rem; font-weight:300; text-decoration:none;">contact@gurme-et.ro</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- pull quote -->
+        <div style="padding:1.5rem; border:1px solid rgba(201,150,42,0.1); background:rgba(201,150,42,0.025);">
+          <p style="font-family:'Cormorant Garamond',serif; color:rgba(247,241,232,0.45); font-size:1.05rem; font-weight:400; font-style:italic; line-height:1.72; margin-bottom:0.75rem;">
+            „Vă așteptăm cu drag și cu un ceai turcesc cald din partea casei."
+          </p>
+          <span class="label-text" style="color:var(--gold);">— Echipa Gurme Et</span>
+        </div>
+      </div>
+
+      <!-- map -->
+      <div style="overflow:hidden; box-shadow:0 4px 40px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,150,42,0.1);">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2847.5!2d26.1428157!3d44.5405057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b21d0b68299a3f%3A0x260bac21cb953706!2sGurme%20et!5e0!3m2!1sro!2sro!4v1710000000000!5m2!1sro!2sro"
+          width="100%"
+          height="500"
+          style="border:0; display:block; filter:grayscale(1) invert(0.92) sepia(0.18) brightness(0.85) contrast(1.1);"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Locația Gurme Et — Calea București 79, Tunari">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════ -->
+<footer id="footer">
+  <div style="max-width:1240px; margin:0 auto; padding:6% 4% 3%;">
+
+    <div class="footer-grid" style="display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:4rem; align-items:start; padding-bottom:3.5rem; border-bottom:1px solid rgba(201,150,42,0.08);">
+
+      <!-- brand -->
+      <div>
+        <a href="#" style="display:inline-flex; align-items:center; text-decoration:none; margin-bottom:1.5rem;">
+          <img src="brand_assetmetns/gurm-et-logo.png" alt="Gurme Et" loading="lazy" style="height:25px; width:auto;">
+        </a>
+        <p style="color:rgba(247,241,232,0.38); font-size:0.82rem; line-height:1.88; font-weight:300; max-width:260px; margin-bottom:1.75rem;">
+          Carne de calitate premium, aprovizionată cu grijă.<br>
+          Măcelăria helal de încredere a familiei tale.
+        </p>
+        <!-- helal badge -->
+        <div style="display:inline-flex; align-items:center; gap:6px; border:1px solid rgba(34,197,94,0.22); padding:5px 12px; margin-bottom:1.5rem;">
+          <svg width="9" height="9" viewBox="0 0 32 32" fill="none">
+            <path d="M16 3C8.82 3 3 8.82 3 16s5.82 13 13 13c1.79 0 3.49-.36 5.03-1.01A11.38 11.38 0 0114.5 16a11.38 11.38 0 0110.33-11.31A12.93 12.93 0 0016 3z" fill="#4ade80"/>
+            <circle cx="24.5" cy="8.5" r="3" fill="#4ade80"/>
+          </svg>
+          <span style="color:#4ade80; font-size:0.55rem; font-weight:800; letter-spacing:0.18em; text-transform:uppercase;">100% Helal Certificat</span>
+        </div>
+        <!-- socials -->
+        <div style="display:flex; gap:0.6rem;">
+          <a href="#" class="social-btn" aria-label="Facebook" style="cursor:pointer;">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Instagram" style="cursor:pointer;">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" fill="rgba(247,241,232,0.5)"/><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="rgba(247,241,232,0.5)" stroke-width="0"/><circle cx="12" cy="12" r="4" fill="none" stroke="#060200" stroke-width="1.8"/><circle cx="17" cy="7" r="1" fill="#060200"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="WhatsApp" style="cursor:pointer;">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" fill="rgba(247,241,232,0.5)"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- quick links -->
+      <div>
+        <h4 class="label-text" style="color:rgba(247,241,232,0.55); margin-bottom:1.75rem;">Linkuri Rapide</h4>
+        <div>
+          <a href="#"         class="footer-link">Acasă</a>
+          <a href="#about"    class="footer-link">Despre Noi</a>
+          <a href="#products" class="footer-link">Produsele Noastre</a>
+          <a href="#reviews"  class="footer-link">Recenzii</a>
+          <a href="#contact"  class="footer-link">Contact</a>
+        </div>
+      </div>
+
+      <!-- contact -->
+      <div>
+        <h4 class="label-text" style="color:rgba(247,241,232,0.55); margin-bottom:1.75rem;">Contactează-ne</h4>
+        <div style="display:flex; flex-direction:column; gap:0.9rem;">
+          <p style="color:rgba(247,241,232,0.38); font-size:0.8rem; font-weight:300; line-height:1.7;">Calea București 79, Tunari, Ilfov 077180</p>
+          <a href="tel:+40728999988" class="footer-contact-link">+40 728 99 99 88</a>
+          <a href="mailto:contact@gurme-et.ro" class="footer-contact-link">contact@gurme-et.ro</a>
+          <p style="color:rgba(247,241,232,0.38); font-size:0.8rem; font-weight:300; line-height:1.8;">Lun–Sâm: 09:00 – 21:00<br>Dum: 09:00 – 20:00</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- bottom bar -->
+    <div style="display:flex; justify-content:space-between; align-items:center; padding-top:2rem; flex-wrap:wrap; gap:1rem;">
+      <p style="color:rgba(247,241,232,0.22); font-size:0.65rem; font-weight:300; letter-spacing:0.06em;">
+        &copy; 2026 Gurme Et. Toate drepturile rezervate.
+      </p>
+      <div style="display:flex; gap:2rem;">
+        <a href="politica-de-confidentialitate.html" style="color:rgba(247,241,232,0.22); font-size:0.65rem; font-weight:300; text-decoration:none; transition:color 0.2s ease;" onmouseover="this.style.color='rgba(247,241,232,0.6)'" onmouseout="this.style.color='rgba(247,241,232,0.22)'">Politică de Confidențialitate</a>
+        <a href="termeni-si-conditii.html" style="color:rgba(247,241,232,0.22); font-size:0.65rem; font-weight:300; text-decoration:none; transition:color 0.2s ease;" onmouseover="this.style.color='rgba(247,241,232,0.6)'" onmouseout="this.style.color='rgba(247,241,232,0.22)'">Termeni și Condiții</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
+</script>
+
+</body>
+</html>
